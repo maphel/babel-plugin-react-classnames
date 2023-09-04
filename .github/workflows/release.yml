@@ -1,0 +1,65 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number'
+        required: true
+
+jobs:
+  update-master-to-tagged-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v3
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set Version from Workflow Input
+        run: |
+          VERSION=${{ github.event.inputs.version }}
+          npm version $VERSION --no-git-tag-version
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Commit, tag and push updated package.json on main
+        run: |
+          git config --local user.email "${{ secrets.GIT_USER_EMAIL }}"
+          git config --local user.name "maphel"
+          git add package.json
+          git commit -m "Update package.json version to ${{ env.VERSION }} on main"
+          git tag "v${{ env.VERSION }}"
+          git push origin main --tags
+
+  publish:
+    needs: update-master-to-tagged-version
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Exclude source maps
+        run: rm -rf dist/**/*.map.js
+
+      - name: Configure .npmrc for Auth
+        run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+      - name: Publish to NPM
+        run: npm publish --access public
+

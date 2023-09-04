@@ -1,0 +1,30 @@
+# Development files
+*.ts
+!*.d.ts
+*.tsx
+*.test.js
+*.spec.js
+*.test.ts
+*.spec.ts
+tsconfig.json
+webpack.config.js
+__tests__/
+
+# Configurations
+.eslintrc
+.prettierrc
+.babelrc
+
+# Miscellaneous
+.gitignore
+.npmignore
+README.md
+.cache/
+.github/
+.yarn/
+coverage/
+.pnp.cjs
+.pnp.loader.mjs
+.yarnrc.yml
+.ready
+jest.config.js
