@@ -56,7 +56,7 @@ const visitor: Visitor = {
           ? (originalValue as JSXExpressionContainer).expression
           : stringLiteral(originalValue as any)
 
-      let processedValue = callExpression(identifier("c"), [originalExpression as any] as (
+      let processedValue = callExpression(identifier("classes"), [originalExpression as any] as (
         | Expression
         | SpreadElement
         | JSXNamespacedName
