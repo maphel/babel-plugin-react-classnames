@@ -29,7 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@babel/traverse", "npm:7.22.15"],\
-            ["@babel/types", "npm:7.22.15"],\
+            ["@babel/types", "npm:7.22.17"],\
             ["@maphel/classes", "npm:0.0.1"],\
             ["@types/babel__core", "npm:7.20.1"],\
             ["@types/babel__generator", "npm:7.6.4"],\
@@ -829,6 +829,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["to-fast-properties", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:7.22.17", {\
+          "packageLocation": "./.yarn/cache/@babel-types-npm-7.22.17-98014090e3-7382220f6e.zip/node_modules/@babel/types/",\
+          "packageDependencies": [\
+            ["@babel/types", "npm:7.22.17"],\
+            ["@babel/helper-string-parser", "npm:7.22.5"],\
+            ["@babel/helper-validator-identifier", "npm:7.22.15"],\
+            ["to-fast-properties", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@bcoe/v8-coverage", [\
@@ -1283,7 +1293,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@maphel/babel-plugin-react-classnames", "workspace:."],\
             ["@babel/traverse", "npm:7.22.15"],\
-            ["@babel/types", "npm:7.22.15"],\
+            ["@babel/types", "npm:7.22.17"],\
             ["@maphel/classes", "npm:0.0.1"],\
             ["@types/babel__core", "npm:7.20.1"],\
             ["@types/babel__generator", "npm:7.6.4"],\
