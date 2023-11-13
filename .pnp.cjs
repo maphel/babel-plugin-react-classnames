@@ -33,7 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@maphel/classes", "npm:0.0.1"],\
             ["@types/babel__core", "npm:7.20.1"],\
             ["@types/babel__generator", "npm:7.6.4"],\
-            ["@types/babel__template", "npm:7.4.1"],\
+            ["@types/babel__template", "npm:7.4.4"],\
             ["@types/babel__traverse", "npm:7.20.1"],\
             ["@types/jest", "npm:29.5.4"],\
             ["@typescript-eslint/eslint-plugin", "virtual:ecdda885d18047a22487e023384d9a4bdef14d74e9cbf7834db8ce578892b3bc0820e90fd49a8011e54139a89e95f0278a662530025d95218b62d73f552c786e#npm:6.6.0"],\
@@ -1287,7 +1287,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@maphel/classes", "npm:0.0.1"],\
             ["@types/babel__core", "npm:7.20.1"],\
             ["@types/babel__generator", "npm:7.6.4"],\
-            ["@types/babel__template", "npm:7.4.1"],\
+            ["@types/babel__template", "npm:7.4.4"],\
             ["@types/babel__traverse", "npm:7.20.1"],\
             ["@types/jest", "npm:29.5.4"],\
             ["@typescript-eslint/eslint-plugin", "virtual:ecdda885d18047a22487e023384d9a4bdef14d74e9cbf7834db8ce578892b3bc0820e90fd49a8011e54139a89e95f0278a662530025d95218b62d73f552c786e#npm:6.6.0"],\
@@ -1445,6 +1445,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-babel__template-npm-7.4.1-fe1db49e53-649fe8b42c.zip/node_modules/@types/babel__template/",\
           "packageDependencies": [\
             ["@types/babel__template", "npm:7.4.1"],\
+            ["@babel/parser", "npm:7.22.15"],\
+            ["@babel/types", "npm:7.22.15"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:7.4.4", {\
+          "packageLocation": "./.yarn/cache/@types-babel__template-npm-7.4.4-f34eba762c-d7a02d2a9b.zip/node_modules/@types/babel__template/",\
+          "packageDependencies": [\
+            ["@types/babel__template", "npm:7.4.4"],\
             ["@babel/parser", "npm:7.22.15"],\
             ["@babel/types", "npm:7.22.15"]\
           ],\
